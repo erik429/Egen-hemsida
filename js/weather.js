@@ -9,7 +9,7 @@ async function fetchWeather() {
         if (response.ok) {
             const weatherHTML = `
                 <p>Temperatur: ${data.main.temp} &deg;C</p>
-                <p>Väder: ${data.weather[0].description}</p>
+                <p>${data.weather[0].description}</p>
                 <p>Vindhastighet: ${data.wind.speed} m/s</p>
             `;
             weatherContainer.innerHTML = weatherHTML;
